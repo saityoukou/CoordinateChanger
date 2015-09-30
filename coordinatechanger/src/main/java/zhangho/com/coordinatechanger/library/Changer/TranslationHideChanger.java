@@ -2,18 +2,18 @@ package zhangho.com.coordinatechanger.library.Changer;
 
 import android.view.View;
 
-import zhangho.com.coordinatechanger.library.Builder.TranslationChangerBuilder;
+import zhangho.com.coordinatechanger.library.Builder.TranslationHideBuilder;
 import zhangho.com.coordinatechanger.library.ChangerType;
 
 /**
  * Created by b05947 on 2015/09/25.
  */
-public class TranslationChanger extends BaseChanger {
+public class TranslationHideChanger extends BaseChanger {
 
-    private TranslationChangerBuilder mBuilder;
+    private TranslationHideBuilder mBuilder;
 
-    public TranslationChanger(TranslationChangerBuilder translationChangerBuilder) {
-        mBuilder = translationChangerBuilder;
+    public TranslationHideChanger(TranslationHideBuilder translationHideBuilder) {
+        mBuilder = translationHideBuilder;
     }
 
     @Override

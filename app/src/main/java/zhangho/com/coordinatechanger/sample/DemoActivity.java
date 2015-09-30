@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import zhangho.com.coordinatechanger.R;
+import zhangho.com.coordinatechanger.library.Builder.AlphaChangerBuilder;
 import zhangho.com.coordinatechanger.library.Builder.TranslationRateChangerBuilder;
 import zhangho.com.coordinatechanger.library.ChangerType;
 import zhangho.com.coordinatechanger.library.CoordinateScrollHelper;
@@ -60,6 +61,12 @@ public class DemoActivity extends AppCompatActivity {
                         new TranslationRateChangerBuilder()
                                 .setChangerType(ChangerType.TRANSLATION_Y)
                                 .setSpeedOfRelative(0.5f)
+                        ,
+                        new AlphaChangerBuilder()
+                                .setFromAlpha(1.0f)
+                                .setToAlpha(0.0f)
+                                .setDuration(500)
+                                .setMultiplier(0.4f)
                 );
 
 

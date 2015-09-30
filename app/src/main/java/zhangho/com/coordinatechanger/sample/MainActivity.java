@@ -35,4 +35,10 @@ public class MainActivity extends ActionBarActivity {
         Intent intent = new Intent(this,DemoActivity3.class);
         startActivity(intent);
     }
+
+    @OnClick(R.id.activity_main_demo4)
+    void clickDemo4(){
+        Intent intent = new Intent(this,DemoActivity4.class);
+        startActivity(intent);
+    }
 }

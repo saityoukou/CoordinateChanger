@@ -24,6 +24,7 @@
         <meta-data android:name="android.support.PARENT_ACTIVITY"
             android:value=".sample.MainActivity" />
         </activity>
+        <activity android:name=".sample.DemoActivity4"/>
 
     </application>
 </manifest>

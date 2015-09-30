@@ -9,17 +9,23 @@
         android:id="@+id/activity_main_demo1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="hideToolbar"/>
+        android:text="sample1"/>
 
     <Button
         android:id="@+id/activity_main_demo2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="hideToolbar2"/>
+        android:text="sample2"/>
 
     <Button
         android:id="@+id/activity_main_demo3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="hideToolbar3"/>
+        android:text="sample3"/>
+
+    <Button
+        android:id="@+id/activity_main_demo4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="sample4"/>
 </LinearLayout>

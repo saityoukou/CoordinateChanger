@@ -1,0 +1,44 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_actor_detail_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <ImageView
+        android:id="@+id/fragment_demo_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:adjustViewBounds="true"
+        android:src="@drawable/cheese_5"/>
+
+
+    <!-- please set background:transparent-->
+    <android.support.v7.widget.RecyclerView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/fragment_demo_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/fragment_demo_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/toolbar_bg_transition">
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/fragment_demo_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignBottom="@+id/fragment_demo_header"
+        android:text="This is demo title!"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        />
+</RelativeLayout>

@@ -12,8 +12,8 @@ import android.widget.TextView;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import zhangho.com.coordinatechanger.R;
-import zhangho.com.coordinatechanger.library.Builder.AlphaChangerBuilder;
 import zhangho.com.coordinatechanger.library.Builder.TransitionDrawableBuilder;
+import zhangho.com.coordinatechanger.library.Builder.TranslationMoveBuilder;
 import zhangho.com.coordinatechanger.library.Builder.TranslationRateChangerBuilder;
 import zhangho.com.coordinatechanger.library.ChangerType;
 import zhangho.com.coordinatechanger.library.CoordinateScrollHelper;
@@ -21,7 +21,7 @@ import zhangho.com.coordinatechanger.library.CoordinateScrollHelper;
 /**
  * Created by b05947 on 2015/09/28.
  */
-public class DemoActivity2 extends AppCompatActivity {
+public class DemoActivity4 extends AppCompatActivity {
 
     @Bind(R.id.fragment_demo_header)
     ImageView mImageView;
@@ -38,7 +38,7 @@ public class DemoActivity2 extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_demo2);
+        setContentView(R.layout.fragment_demo4);
 
         ButterKnife.bind(this);
 
@@ -74,32 +74,22 @@ public class DemoActivity2 extends AppCompatActivity {
                 //mToolbar must set TranslationDrawable background while use TranslationDrawableBuilder
                 mCoordinateScrollHelper.addScrollObserver(mToolbar,
                         new TransitionDrawableBuilder()
-                            .setMultiplier(0.6f)
-                            .setDuration(300)
+                                .setMultiplier(0.6f)
+                                .setDuration(300)
                 );
 
                 //set toolbar title action
                 mCoordinateScrollHelper.addScrollObserver(mTitle,
-                        new AlphaChangerBuilder()
-                                .setFromAlpha(0.0f)
-                                .setToAlpha(1.0f)
-                                .setDuration(500)
-                                .setMultiplier(0.6f)
+                        new TranslationMoveBuilder()
+                                .setChangerType(ChangerType.TRANSLATION_Y)
+                                .setEndPositionX(4)
+                                .setEndPositionY(mToolbar.getHeight() / 6)
+                                .setEndScale(0.5f)
                 );
 
                 //start listen
                 mCoordinateScrollHelper.setUp();
             }
         });
-    }
-
-    // A method to find height of the status bar
-    public int getStatusBarHeight() {
-        int result = 0;
-        int resourceId = getResources().getIdentifier("status_bar_height", "dimen", "android");
-        if (resourceId > 0) {
-            result = getResources().getDimensionPixelSize(resourceId);
-        }
-        return result;
     }
 }
