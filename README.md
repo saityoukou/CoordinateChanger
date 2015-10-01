@@ -2,7 +2,7 @@
 Android scroll animation like design library coordinatorlayout
 
 
-![](https://raw.githubusercontent.com/ksoichiro/Android-ObservableScrollView/master/samples/images/demo12.gif)
+![](https://raw.githubusercontent.com/saityoukou/CoordinateChanger/master/app/images/demo0.gif)
 
 ## License
 
