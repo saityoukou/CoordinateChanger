@@ -4,6 +4,25 @@ Android scroll animation like design library coordinatorlayout
 
 ![](https://raw.githubusercontent.com/saityoukou/CoordinateChanger/master/app/images/demo0.gif)
 
+
+## Usage
+```
+                //set header action
+                mCoordinateScrollHelper.addScrollObserver(mImageView,
+                        new TranslationRateChangerBuilder()
+                                .setChangerType(ChangerType.TRANSLATION_Y)
+                                .setSpeedOfRelative(0.5f)
+                        ,
+                        new AlphaChangerBuilder()
+                                .setFromAlpha(1.0f)
+                                .setToAlpha(0.0f)
+                                .setDuration(500)
+                                .setMultiplier(0.4f)
+                );
+```
+
+
+
 ## License
 
 ```license
